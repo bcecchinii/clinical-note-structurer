@@ -1,0 +1,13 @@
+{
+    "name": "Anna Bianchi",
+    "age": 64,
+    "conditions": [
+        "Hypertension",
+        "Type 2 Diabetes"
+    ],
+    "medications": [
+        "Ramipril",
+        "Metformin",
+        "Aspirin"
+    ]
+}

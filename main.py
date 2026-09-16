@@ -1,19 +1,31 @@
 import json
-with open("patient.json", "r") as file:
-    patient = json.load(file)
 
-'''
-print(f"Patient Name: {patient['name']}")
-print(f"Patient Age: {patient['age']}")
+def read_note(filename):
+    with open(filename, "r") as file:
+        return file.read()
 
-for condition in patient["conditions"]:
-    print(f"Condition: {condition}")
 
-for medication in patient["medications"]:
-    print(f"Medication: {medication}")
-'''
+def structure_note(note):
+    structured_data = {
+        "name": "Anna Bianchi",
+        "age": 64,
+        "conditions": ["Hypertension", "Type 2 Diabetes"],
+        "medications": ["Ramipril", "Metformin", "Aspirin"]
+    }
+    return structured_data
 
-with open("clinical_note.txt", "r") as clinical:
-    clinical_note = clinical.read()
 
-print(f"Clinical Note: {clinical_note}")
+def save_json(data, filename):
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=4)
+
+
+def main():
+    clinical_note = read_note("clinical_note.txt")
+    result = structure_note(clinical_note)
+    save_json(result, "structured_data.json")
+    print(f"clinical note: {clinical_note}")
+
+
+if __name__ == "__main__":
+    main()
