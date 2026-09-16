@@ -1,13 +1,12 @@
 {
-    "name": "Anna Bianchi",
-    "age": 64,
+    "name": "Marco Rossi",
+    "age": 52,
     "conditions": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "asthma",
+        "high cholesterol"
     ],
     "medications": [
-        "Ramipril",
-        "Metformin",
-        "Aspirin"
+        "Atorvastatin",
+        "Salbutamol"
     ]
 }
