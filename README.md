@@ -66,6 +66,64 @@ The primary objective of this project is to develop practical skills that comple
 * Streamlit
 
 ---
+## Setup
+
+### 1. Clone the Repository
+
+Clone the repository and move into the project directory.
+
+### 2. Create a Virtual Environment
+
+Create a Python virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+The `.venv` directory contains the local Python environment and installed dependencies. It is excluded from version control and should not be committed to GitHub.
+
+### 3. Install Dependencies
+
+Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+The project currently uses:
+
+- `google-genai` to interact with the Gemini API.
+- `python-dotenv` to load environment variables from a local `.env` file.
+
+### 4. Configure the Gemini API Key
+
+Create a `.env` file in the root directory of the project:
+
+```text
+GEMINI_API_KEY=your_api_key_here
+```
+
+The API key is loaded at runtime and is never stored directly in the Python source code.
+
+The `.env` file contains sensitive credentials and is excluded from version control through `.gitignore`.
+
+**Never commit API keys or other secrets to the repository.**
+
+### 5. Local Files Excluded from Git
+
+The following files and directories are intentionally excluded from version control:
+
+```text
+.env
+.venv/
+__pycache__/
+```
+
+- `.env` stores local environment variables and secrets.
+- `.venv/` contains the local Python virtual environment and installed packages.
+- `__pycache__/` contains automatically generated Python bytecode.
+
+---
 
 ## Project Roadmap
 
