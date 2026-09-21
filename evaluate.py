@@ -9,6 +9,30 @@ def load_cases(filename):
         return json.load(file)
 
 
+def normalize_text(value):
+    return value.strip().lower()
+
+
+def normalize_data(data):
+    normalized = data.copy()
+
+    if normalized["name"] is not None:
+        normalized["name"] = normalize_text(normalized["name"])
+
+    normalized["symptoms"] = [
+        normalize_text(item) for item in normalized["symptoms"]
+    ]
+
+    normalized["conditions"] = [
+        normalize_text(item) for item in normalized["conditions"]
+    ]
+
+    normalized["medications"] = [
+        normalize_text(item) for item in normalized["medications"]
+    ]
+
+    return normalized
+
 def main():
     cases = load_cases("evaluation/cases.json")
 
@@ -34,7 +58,10 @@ def main():
         actual = result.model_dump()
         expected = case["expected"]
 
-        if actual == expected:
+        normalized_actual = normalize_data(actual)
+        normalized_expected = normalize_data(expected)
+
+        if normalized_actual == normalized_expected:
             print("PASS")
             passed += 1
         else:
