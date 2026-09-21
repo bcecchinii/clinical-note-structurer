@@ -1,0 +1,66 @@
+[
+    {
+        "id": "complete_patient",
+        "note": "Anna Bianchi is a 64-year-old patient with hypertension and type 2 diabetes. She is currently taking Ramipril and Metformin.",
+        "expected": {
+            "name": "Anna Bianchi",
+            "age": 64,
+            "symptoms": [],
+            "conditions": [
+                "hypertension",
+                "type 2 diabetes"
+            ],
+            "medications": [
+                "Ramipril",
+                "Metformin"
+            ]
+        }
+    },
+    {
+        "id": "missing_demographics",
+        "note": "The patient reports persistent headaches and is currently taking Ibuprofen.",
+        "expected": {
+            "name": null,
+            "age": null,
+            "symptoms": [
+                "persistent headaches"
+            ],
+            "conditions": [],
+            "medications": [
+                "Ibuprofen"
+            ]
+        }
+    },
+    {
+        "id": "family_history",
+        "note": "Giulia Neri reports increased thirst and frequent urination. Her father has type 2 diabetes. She is not currently taking any medications.",
+        "expected": {
+            "name": "Giulia Neri",
+            "age": null,
+            "symptoms": [
+                "increased thirst",
+                "frequent urination"
+            ],
+            "conditions": [],
+            "medications": []
+        }
+    },
+    {
+        "id": "symptoms_and_condition",
+        "note": "The patient is a 45-year-old with a history of asthma. She reports shortness of breath and persistent cough. She currently uses Salbutamol.",
+        "expected": {
+            "name": null,
+            "age": 45,
+            "symptoms": [
+                "shortness of breath",
+                "persistent cough"
+            ],
+            "conditions": [
+                "asthma"
+            ],
+            "medications": [
+                "Salbutamol"
+            ]
+        }
+    }
+]
