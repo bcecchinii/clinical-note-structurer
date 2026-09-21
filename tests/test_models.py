@@ -28,7 +28,7 @@ def test_clinical_note_with_missing_data():
     assert note.age is None
     assert note.symptoms == []
     assert note.conditions == []
-    assert note.medications == []
+    assert note.medications is None
 
 
 def test_invalid_age():

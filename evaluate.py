@@ -27,9 +27,10 @@ def normalize_data(data):
         normalize_text(item) for item in normalized["conditions"]
     ]
 
-    normalized["medications"] = [
-        normalize_text(item) for item in normalized["medications"]
-    ]
+    if normalized["medications"] is not None:
+        normalized["medications"] = [
+            normalize_text(item) for item in normalized["medications"]
+        ] 
 
     return normalized
 

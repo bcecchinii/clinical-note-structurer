@@ -22,7 +22,11 @@ class ClinicalNote(BaseModel):
         description="Diagnosed medical conditions explicitly stated in the clinical note. Do not include symptoms."
     )
 
-    medications: list[str] = Field(
-        default_factory=list,
-        description="Medications explicitly stated in the clinical note."
+    medications: list[str] | None = Field(
+        default=None,
+        description=(
+            "Medications explicitly stated in the clinical note. "
+            "Return an empty list if the note explicitly states that the patient "
+            "takes no medications. Return null if medication information is not mentioned."
+        )
     )

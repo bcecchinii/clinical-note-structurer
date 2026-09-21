@@ -63,4 +63,20 @@
             ]
         }
     }
+    ,
+    {
+        "id": "medications_not_mentioned",
+        "note": "Paolo Conti is a 41-year-old patient who reports nausea and fatigue.",
+        "expected": {
+            "name": "Paolo Conti",
+            "age": 41,
+            "symptoms": [
+                "nausea",
+                "fatigue"
+            ],
+            "conditions": [],
+            "medications": null
+        }
+    }
 ]
+

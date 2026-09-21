@@ -28,7 +28,11 @@ def structure_note(note):
         - Do not assign family history information to the patient.
         - Distinguish symptoms from diagnosed medical conditions.
         - If the patient's name or age is not stated, return null.
-        - If no symptoms, conditions, or medications are stated for the patient, return an empty list.
+        - If no symptoms or conditions are stated for the patient, return an empty list.
+        - If the note explicitly states that the patient takes no medications, return an empty medications list.
+        - If medication information is not mentioned, return null for medications.
+
+
 
         Clinical note:
         {note}
