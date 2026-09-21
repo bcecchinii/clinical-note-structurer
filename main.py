@@ -25,7 +25,20 @@ def structure_note(note):
 
     interaction = client.interactions.create(
         model="gemini-3.6-flash",
-        input=note,
+        input=f"""
+        Extract structured clinical information from the clinical note below.
+
+        Rules:
+        - Extract only information explicitly stated about the patient.
+        - Do not infer or guess missing information.
+        - Do not assign family history information to the patient.
+        - Distinguish symptoms from diagnosed medical conditions.
+        - If the patient's name or age is not stated, return null.
+        - If no symptoms, conditions, or medications are stated for the patient, return an empty list.
+
+        Clinical note:
+        {note}
+        """,
         response_format={
             "type": "text",
             "mime_type": "application/json",

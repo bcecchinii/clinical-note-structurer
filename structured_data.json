@@ -1,12 +1,10 @@
 {
-    "name": "Marco Rossi",
-    "age": 52,
-    "conditions": [
-        "asthma",
-        "high cholesterol"
+    "name": "Giulia Neri",
+    "age": null,
+    "symptoms": [
+        "increased thirst",
+        "frequent urination"
     ],
-    "medications": [
-        "Atorvastatin",
-        "Salbutamol"
-    ]
+    "conditions": [],
+    "medications": []
 }
