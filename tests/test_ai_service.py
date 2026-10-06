@@ -14,11 +14,11 @@ def test_structure_note_with_mocked_gemini():
     }
     """
 
-    fake_interaction = MagicMock()
-    fake_interaction.output_text = fake_json
+    fake_response = MagicMock()
+    fake_response.text = fake_json
 
     with patch("ai_service.genai.Client") as mock_client:
-        mock_client.return_value.interactions.create.return_value = fake_interaction
+        mock_client.return_value.models.generate_content.return_value = fake_response
 
         result = structure_note(
             "Anna Bianchi is a 64-year-old patient with hypertension."

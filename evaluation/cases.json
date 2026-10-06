@@ -78,5 +78,89 @@
             "medications": null
         }
     }
+    ,
+
+    {
+        "id": "negated_symptom",
+        "note": "Marco Riva is a 52-year-old patient with hypertension. He denies chest pain but reports dizziness.",
+        "expected": {
+            "name": "Marco Riva",
+            "age": 52,
+            "symptoms": [
+                "dizziness"
+            ],
+            "conditions": [
+                "hypertension"
+            ],
+            "medications": null
+        }
+    },
+    {
+        "id": "family_history_with_patient_condition",
+        "note": "Laura Greco is a 58-year-old patient with hypertension. Her mother has type 2 diabetes. Laura reports fatigue and takes Ramipril.",
+        "expected": {
+            "name": "Laura Greco",
+            "age": 58,
+            "symptoms": [
+                "fatigue"
+            ],
+            "conditions": [
+                "hypertension"
+            ],
+            "medications": [
+                "Ramipril"
+            ]
+        }
+    },
+    {
+        "id": "explicit_no_medications",
+        "note": "Elena Rossi is a 37-year-old patient who reports abdominal pain. She is not currently taking any medications.",
+        "expected": {
+            "name": "Elena Rossi",
+            "age": 37,
+            "symptoms": [
+                "abdominal pain"
+            ],
+            "conditions": [],
+            "medications": []
+        }
+    }
+    ,
+    {
+        "id": "multiple_symptoms_and_medications",
+        "note": "Luca Ferri is a 70-year-old patient with chronic obstructive pulmonary disease. He reports cough and shortness of breath and is taking Salbutamol and Tiotropium.",
+        "expected": {
+            "name": "Luca Ferri",
+            "age": 70,
+            "symptoms": [
+                "cough",
+                "shortness of breath"
+            ],
+            "conditions": [
+                "chronic obstructive pulmonary disease"
+            ],
+            "medications": [
+                "Salbutamol",
+                "Tiotropium"
+            ]
+        }
+    },
+    {
+        "id": "condition_without_symptoms",
+        "note": "Sara Moretti is a 49-year-old patient with hypothyroidism. She is taking Levothyroxine.",
+        "expected": {
+            "name": "Sara Moretti",
+            "age": 49,
+            "symptoms": [],
+            "conditions": [
+                "hypothyroidism"
+            ],
+            "medications": [
+                "Levothyroxine"
+            ]
+        }
+    }
+
+
 ]
 
